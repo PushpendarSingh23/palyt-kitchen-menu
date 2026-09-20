@@ -1,0 +1,80 @@
+[
+  {
+    "id": "shahi_paneer",
+    "name": "Shahi Paneer",
+    "price": 14.99,
+    "description": "Cottage cheese cubes simmered in a rich, creamy cashew and tomato gravy.",
+    "ingredients": [
+      { "id": "paneer", "name": "Paneer", "quantity": 180, "unit": "g" },
+      { "id": "cashews", "name": "Cashews", "quantity": 30, "unit": "g" },
+      { "id": "heavy_cream", "name": "Heavy Cream", "quantity": 50, "unit": "ml" },
+      { "id": "tomatoes", "name": "Tomatoes", "quantity": 150, "unit": "g" },
+      { "id": "butter", "name": "Butter", "quantity": 25, "unit": "g" },
+      { "id": "ginger_garlic_paste", "name": "Ginger Garlic Paste", "quantity": 15, "unit": "g" },
+      { "id": "garam_masala", "name": "Garam Masala", "quantity": 5, "unit": "g" }
+    ]
+  },
+  {
+    "id": "cashew_nut_korma",
+    "name": "Cashew Nut Korma",
+    "price": 16.50,
+    "description": "Delicate vegetable medley in an aromatic, velvety cashew-cream sauce.",
+    "ingredients": [
+      { "id": "cashews", "name": "Cashews", "quantity": 50, "unit": "g" },
+      { "id": "heavy_cream", "name": "Heavy Cream", "quantity": 40, "unit": "ml" },
+      { "id": "onions", "name": "Onions", "quantity": 100, "unit": "g" },
+      { "id": "cooking_oil", "name": "Cooking Oil", "quantity": 20, "unit": "ml" },
+      { "id": "garam_masala", "name": "Garam Masala", "quantity": 5, "unit": "g" }
+    ]
+  },
+  {
+    "id": "paneer_butter_masala",
+    "name": "Paneer Butter Masala",
+    "price": 13.99,
+    "description": "Succulent paneer pieces cooked in a buttery tomato gravy with fresh cream.",
+    "ingredients": [
+      { "id": "paneer", "name": "Paneer", "quantity": 200, "unit": "g" },
+      { "id": "tomatoes", "name": "Tomatoes", "quantity": 180, "unit": "g" },
+      { "id": "butter", "name": "Butter", "quantity": 30, "unit": "g" },
+      { "id": "heavy_cream", "name": "Heavy Cream", "quantity": 30, "unit": "ml" },
+      { "id": "ginger_garlic_paste", "name": "Ginger Garlic Paste", "quantity": 15, "unit": "g" }
+    ]
+  },
+  {
+    "id": "chicken_biryani",
+    "name": "Chicken Biryani",
+    "price": 17.50,
+    "description": "Fragrant basmati rice layered with spiced marinated chicken and herbs.",
+    "ingredients": [
+      { "id": "chicken_breast", "name": "Chicken Breast", "quantity": 250, "unit": "g" },
+      { "id": "basmati_rice", "name": "Basmati Rice", "quantity": 200, "unit": "g" },
+      { "id": "onions", "name": "Onions", "quantity": 80, "unit": "g" },
+      { "id": "cooking_oil", "name": "Cooking Oil", "quantity": 30, "unit": "ml" },
+      { "id": "garam_masala", "name": "Garam Masala", "quantity": 8, "unit": "g" },
+      { "id": "green_chillies", "name": "Green Chillies", "quantity": 10, "unit": "g" }
+    ]
+  },
+  {
+    "id": "dal_makhani",
+    "name": "Dal Makhani",
+    "price": 11.99,
+    "description": "Slow-cooked black lentils enriched with butter, cream, and subtle spices.",
+    "ingredients": [
+      { "id": "heavy_cream", "name": "Heavy Cream", "quantity": 40, "unit": "ml" },
+      { "id": "butter", "name": "Butter", "quantity": 35, "unit": "g" },
+      { "id": "tomatoes", "name": "Tomatoes", "quantity": 100, "unit": "g" },
+      { "id": "ginger_garlic_paste", "name": "Ginger Garlic Paste", "quantity": 15, "unit": "g" },
+      { "id": "garam_masala", "name": "Garam Masala", "quantity": 5, "unit": "g" }
+    ]
+  },
+  {
+    "id": "jeera_rice",
+    "name": "Jeera Rice",
+    "price": 6.50,
+    "description": "Steamed basmati rice tempered with aromatic cumin seeds and clarified butter.",
+    "ingredients": [
+      { "id": "basmati_rice", "name": "Basmati Rice", "quantity": 180, "unit": "g" },
+      { "id": "butter", "name": "Butter", "quantity": 15, "unit": "g" }
+    ]
+  }
+]
