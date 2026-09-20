@@ -1,0 +1,14 @@
+{
+  "name": "palyt-kitchen-menu",
+  "version": "1.0.0",
+  "description": "Kitchen stock management and dynamic menu synchronization engine",
+  "type": "module",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "node --test test/logic.test.js",
+    "start": "npx serve -l 3000 ."
+  },
+  "keywords": ["restaurant", "inventory", "recipes", "palyt", "menu-sync"],
+  "author": "Palyt Engineering Candidate",
+  "license": "MIT"
+}
