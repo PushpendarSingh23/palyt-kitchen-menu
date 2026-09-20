@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palyt - Kitchen Stock & Menu Synchronizer</title>
+  <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <h1>👨‍🍳 Palyt Kitchen & Menu Synchronizer</h1>
+      <p>Live inventory tracking & instant menu availability reactivity</p>
+    </div>
+    <div class="header-actions">
+      <div class="metrics-banner">
+        <div class="metric-item">Stock Items: <strong id="metricsStockCount">15</strong></div>
+        <div class="metric-item">Below Par: <strong id="metricsBelowParCount" style="color:#d97706;">0</strong></div>
+        <div class="metric-item">Available Dishes: <strong id="metricsAvailableDishes" style="color:#16a34a;">6 / 6</strong></div>
+      </div>
+      <button class="btn btn-secondary btn-sm" id="resetBtn" title="Reset back to initial dataset">↺ Reset Data</button>
+    </div>
+  </header>
+
+  <main class="app-container">
+    <!-- Left Column: Kitchen Stock Management -->
+    <section class="panel" id="kitchenPanel">
+      <div class="panel-header">
+        <h2>📦 Kitchen Stock Management</h2>
+        <span style="font-size: 0.8rem; color: #64748b;">Par level = reorder threshold</span>
+      </div>
+
+      <!-- Add New Ingredient Card -->
+      <details class="form-card">
+        <summary style="cursor: pointer; font-weight: 600; font-size: 0.875rem; color: #2563eb;">+ Add New Ingredient</summary>
+        <form id="addIngredientForm" style="margin-top: 0.75rem;">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="ingName">Ingredient Name</label>
+              <input type="text" id="ingName" name="name" placeholder="e.g. Cardamom Pods" required />
+            </div>
+            <div class="form-group">
+              <label for="ingQty">Quantity</label>
+              <input type="number" step="any" min="0" id="ingQty" name="quantity" placeholder="e.g. 2.5" required />
+            </div>
+            <div class="form-group">
+              <label for="ingUnit">Unit</label>
+              <select id="ingUnit" name="unit" required>
+                <option value="kg">kg (kilograms)</option>
+                <option value="g">g (grams)</option>
+                <option value="l">l (litres)</option>
+                <option value="ml">ml (millilitres)</option>
+                <option value="bunches">bunches</option>
+                <option value="pcs">pcs (pieces)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="ingPar">Par Level</label>
+              <input type="number" step="any" min="0" id="ingPar" name="par" placeholder="e.g. 1.0" required />
+            </div>
+            <button type="submit" class="btn btn-primary" style="height: 38px;">Add</button>
+          </div>
+          <div class="form-error" id="formError"></div>
+        </form>
+      </details>
+
+      <!-- Search Toolbar -->
+      <div class="toolbar">
+        <input type="text" id="searchInput" class="search-input" placeholder="🔍 Search ingredients by name, unit, or ID..." />
+      </div>
+
+      <!-- Inventory Table -->
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Ingredient</th>
+              <th>In Stock</th>
+              <th>Unit</th>
+              <th>Par Level</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="stockTableBody">
+            <!-- Rendered by app.js -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Activity & Order Feed -->
+      <div class="order-feed">
+        <h3>Live Operations Log</h3>
+        <ul class="feed-list" id="feedList">
+          <li class="feed-item">
+            <span><strong>[System]</strong> Kitchen inventory synchronized with live menu.</span>
+            <span style="color:#94a3b8; font-size:0.75rem;">Ready</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Right Column: Diner Menu -->
+    <section class="panel" id="menuPanel">
+      <div class="panel-header">
+        <h2>🍽️ Diner Menu (Live View)</h2>
+        <span style="font-size: 0.8rem; color: #64748b;">Dishes automatically hide/disable when stock < par</span>
+      </div>
+
+      <div class="menu-grid" id="menuContainer">
+        <!-- Rendered by app.js -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Dynamic Modal Container -->
+  <div id="modalContainer"></div>
+
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>
